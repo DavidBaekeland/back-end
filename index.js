@@ -268,7 +268,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="logout")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=200", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 console.log(response.icons[27].icon_id);
                 response.icons.forEach(logout => {
