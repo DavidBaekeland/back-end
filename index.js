@@ -253,105 +253,17 @@ app.get('/icons/:name', async(req, res)  =>  {
           };
           
           if(name=="account")  {
-            try  {
-              getData('https://api.iconfinder.com/v4/icons/search?query=Stefan%20Taubert&count=4', options).then(response => {
-                console.log(response.icons[3].vector_sizes[0].formats[0].download_url);
-            
-                    getSvg(`${response.icons[1].vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                      // console.log(response2) 
-                      res.status(200).send(response2);       
-                    });
-                
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("account");       
           }else if(name=="download")  {
-            try  {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/7124090/download_icon
-                console.log(response.icons[9].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867888) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(response2);       
-                      });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("download");   
           }else if(name=="plus")  {
-            try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=500", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/2867890/edit_icon
-                // Er zijn 152 icons => array => 151
-                console.log(response.icons[151].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867957) {
-                      // getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(logout);       
-                      // });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("download"); 
           }else if(name=="building")  {
-            try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/2867890/edit_icon
-                console.log(response.icons[66].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867869) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(response2);       
-                      });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("building"); 
           }else if(name=="travel")  {
-            try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/2867890/edit_icon
-                console.log(response.icons[65].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867867) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(response2);       
-                      });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("travel"); 
           }else if(name=="money")  {
-            try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=200", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/2867890/edit_icon
-                console.log(response.icons[99].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867884) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(response2);       
-                      });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("money"); 
           }else if(name=="pijl")  {
             try {
               getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=307", options).then(response => {
@@ -370,22 +282,7 @@ app.get('/icons/:name', async(req, res)  =>  {
               console.log(error)
             };
           }else if(name=="refresh")  {
-            try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=140", options).then(response => {
-                //https://www.iconfinder.com/search?q=Heroicons
-                // https://www.iconfinder.com/icons/2867890/edit_icon
-                console.log(response.icons[75].icon_id);
-                response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867936) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
-                          res.status(200).send(response2);       
-                      });
-                   }
-                })
-              })
-            }catch(error) {
-              console.log(error)
-            };
+            res.status(200).send("refresh"); 
           }else {
             res.status(400).send("Bad parameter");
           }
