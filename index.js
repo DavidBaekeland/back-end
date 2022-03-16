@@ -268,7 +268,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="logout")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=45", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 console.log(response.icons[27].icon_id);
                 response.icons.forEach(logout => {
@@ -284,7 +284,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="download")  {
             try  {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=45", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/7124090/download_icon
                 console.log(response.icons[9].icon_id);
@@ -301,7 +301,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="plus")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=400", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=500", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 // Er zijn 152 icons => array => 151
@@ -319,7 +319,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="building")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=67", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 console.log(response.icons[66].icon_id);
@@ -336,7 +336,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="travel")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=66", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 console.log(response.icons[65].icon_id);
@@ -353,7 +353,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="money")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=200", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 console.log(response.icons[99].icon_id);
@@ -370,7 +370,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="pijl")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=207", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=307", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 console.log(response.icons[206].icon_id);
@@ -387,7 +387,7 @@ app.get('/icons/:name', async(req, res)  =>  {
             };
           }else if(name=="refresh")  {
             try {
-              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=76", options).then(response => {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=140", options).then(response => {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 console.log(response.icons[75].icon_id);
