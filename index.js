@@ -264,11 +264,11 @@ app.get('/icons/:name', async(req, res)  =>  {
                 // Er zijn 152 icons => array => 151
                 console.log(response.icons[151].icon_id);
                 response.icons.forEach(logout => {
-                   if(logout.icon_id == 2867957) {
-                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
+                  //  if(logout.icon_id == 2867957) {
+                      getSvg(`${logout.vector_sizes[39].formats[0].download_url}`, options).then(response2 =>  {
                           res.status(200).send(response2);       
                       });
-                   }
+                  //  }
                 })
               })
             }catch(error) {
