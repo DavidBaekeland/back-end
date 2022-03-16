@@ -265,7 +265,7 @@ app.get('/icons/:name', async(req, res)  =>  {
                 console.log(response.icons[39].icon_id);
                 response.icons.forEach(logout => {
                     if(logout.icon_id == 2867933) {
-                      getSvg(`${logout.vector_sizes[39].formats[0].download_url}`, options).then(response2 =>  {
+                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
                           res.status(200).send(response2);       
                       });
                     }
