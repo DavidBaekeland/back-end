@@ -257,13 +257,74 @@ app.get('/icons/:name', async(req, res)  =>  {
           }else if(name=="download")  {
             res.status(200).send("download");   
           }else if(name=="plus")  {
-            res.status(200).send("plus"); 
+            try {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=500", options).then(response => {
+                //https://www.iconfinder.com/search?q=Heroicons
+                // https://www.iconfinder.com/icons/2867890/edit_icon
+                // Er zijn 152 icons => array => 151
+                console.log(response.icons[151].icon_id);
+                response.icons.forEach(logout => {
+                   if(logout.icon_id == 2867957) {
+                      // getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
+                          res.status(200).send(logout);       
+                      // });
+                   }
+                })
+              })
+            }catch(error) {
+              console.log(error)
+            };
           }else if(name=="building")  {
-            res.status(200).send("building"); 
+            try {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
+                //https://www.iconfinder.com/search?q=Heroicons
+                // https://www.iconfinder.com/icons/2867890/edit_icon
+                console.log(response.icons[66].icon_id);
+                response.icons.forEach(logout => {
+                   if(logout.icon_id == 2867869) {
+                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
+                          res.status(200).send(response2);       
+                      });
+                   }
+                })
+              })
+            }catch(error) {
+              console.log(error)
+            };
           }else if(name=="travel")  {
-            res.status(200).send("travel"); 
+            try {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=100", options).then(response => {
+                //https://www.iconfinder.com/search?q=Heroicons
+                // https://www.iconfinder.com/icons/2867890/edit_icon
+                console.log(response.icons[65].icon_id);
+                response.icons.forEach(logout => {
+                   if(logout.icon_id == 2867867) {
+                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
+                          res.status(200).send(response2);       
+                      });
+                   }
+                })
+              })
+            }catch(error) {
+              console.log(error)
+            };
           }else if(name=="money")  {
-            res.status(200).send("money"); 
+            try {
+              getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=200", options).then(response => {
+                //https://www.iconfinder.com/search?q=Heroicons
+                // https://www.iconfinder.com/icons/2867890/edit_icon
+                console.log(response.icons[99].icon_id);
+                response.icons.forEach(logout => {
+                   if(logout.icon_id == 2867884) {
+                      getSvg(`${logout.vector_sizes[0].formats[0].download_url}`, options).then(response2 =>  {
+                          res.status(200).send(response2);       
+                      });
+                   }
+                })
+              })
+            }catch(error) {
+              console.log(error)
+            };
           }else if(name=="pijl")  {
             try {
               getData("https://api.iconfinder.com/v4/icons/search?query=Heroicons&count=307", options).then(response => {
@@ -282,7 +343,7 @@ app.get('/icons/:name', async(req, res)  =>  {
               console.log(error)
             };
           }else if(name=="refresh")  {
-            res.status(200).send("refresh"); 
+            res.status(200).send("refresh");
           }else {
             res.status(400).send("Bad parameter");
           }
