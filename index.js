@@ -262,7 +262,7 @@ app.get('/icons/:name', async(req, res)  =>  {
                 //https://www.iconfinder.com/search?q=Heroicons
                 // https://www.iconfinder.com/icons/2867890/edit_icon
                 // Er zijn 152 icons => array => 151
-                console.log(response.icons[151].icon_id);
+                console.log(response.icons[39].icon_id);
                 response.icons.forEach(logout => {
                   //  if(logout.icon_id == 2867957) {
                       getSvg(`${logout.vector_sizes[39].formats[0].download_url}`, options).then(response2 =>  {
