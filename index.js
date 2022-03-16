@@ -257,7 +257,7 @@ app.get('/icons/:name', async(req, res)  =>  {
           }else if(name=="download")  {
             res.status(200).send("download");   
           }else if(name=="plus")  {
-            res.status(200).send("download"); 
+            res.status(200).send("plus"); 
           }else if(name=="building")  {
             res.status(200).send("building"); 
           }else if(name=="travel")  {
